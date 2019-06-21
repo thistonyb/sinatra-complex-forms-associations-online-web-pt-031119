@@ -18,6 +18,7 @@ class OwnersController < ApplicationController
     end
     @owner.save
     redirect to "owners/#{@owner.id}"
+    binding.pry
   end
 
   get '/owners/:id/edit' do
