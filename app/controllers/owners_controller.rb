@@ -37,6 +37,7 @@ class OwnersController < ApplicationController
     end
 
     @owner = Owner.find(params[:id])
+    binding.pry
     @owner.update(params["owner"])
     if !params["pet"]["name"].empty?
       @owner.pets << Pet.create(name: params["pet"]["name"])
